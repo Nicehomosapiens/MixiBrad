@@ -1,0 +1,99 @@
+
+
+body {
+    background-image: url('images/forsite.png'); /* Замените на путь к вашему изображению */
+    background-size: cover;
+    background-position:center; /* Центрирование изображения по вертикали и сдвиг вправо */
+    background-repeat: no-repeat; /* Убираем повторение */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif; /* Установка шрифта */
+}
+
+.container {
+    background-color: rgba(240, 240, 240, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 400px; /* Устанавливаем ширину */
+    position: relative;
+    z-index: 1; /* Устанавливаем z-index для белого прямоугольника */
+    margin-left: 30px;
+    margin-top: -300px; /* Отрицательный верхний отступ для поднятия контейнера */
+}
+
+.popup h1 {
+    margin-bottom: 20px; /* Увеличен отступ сверху */
+    font-size: 30px; /* Увеличен размер шрифта */
+}
+
+.popup p {
+    margin: 10px 0;
+}
+
+.telegram-button {
+    display: inline-flex; /* Изменено на inline-flex для вертикального выравнивания */
+    align-items: center; /* Выравнивание иконки и текста по центру */
+    background-color: #00447B;
+    color: white;
+    padding: 10px 30px; /* Увеличены отступы для ширины */
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Расстояние от текста */
+}
+
+/* Иконка */
+.telegram-icon {
+    width: 40px; /* Установка ширины иконки */
+    height: 40px; /* Установка высоты иконки */
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+    margin-left: 20px;
+}
+
+/* Эффект наведения на кнопку */
+.telegram-button:hover {
+    background-color: #0e2635;
+}
+
+/* Адаптация для разных устройств */
+@media (max-width: 600px) {
+    body {
+  
+        padding: 20px; /* Отступы по краям */
+    }
+
+    .container {
+        width: 100%; /* Ширина для мобильных устройств */
+        margin-left: 0; /* Убираем сдвиг влево */
+        margin-top: 0; /* Убираем отрицательный отступ */
+    }
+
+    .popup {
+        padding: 15px; /* Уменьшаем отступы внутри контейнера */
+    }
+
+    .telegram-button {
+        width: 80%; /* Кнопка занимает всю ширину */
+        padding: 10px 0; /* Увеличиваем вертикальные отступы для кнопки */
+        
+    }
+
+    .telegram-icon {
+        width: 30px; /* Уменьшаем иконку для мобильных устройств */
+        height: 30px; /* Уменьшаем иконку для мобильных устройств */
+    }
+}
+
+@media (min-width: 601px) {
+    .container {
+        transform: translateX(-30px); /* Сдвиг влево для десктопов */
+    }
+}
+@media (max-width: 600px) {
+    body {
+        background-image: url('images/mobkart.png'); /* Замените на путь к изображению для мобильной версии */
+    }
+}
